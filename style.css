@@ -1,0 +1,14 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.employee-card {
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.employee-img {
+    height: 220px;
+    object-fit: cover;
+}
