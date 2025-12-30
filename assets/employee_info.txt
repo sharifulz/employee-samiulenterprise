@@ -1,0 +1,75 @@
+Samiul Enterprise
+Owner: Jahangir Alam Swapon
+Address: 23, B.B National Stadium, Super Market, Dhaka-1000
+Established: 2013
+Business: Wholesale & Retail of Electronics and Home Appliances
+
+-------------------------------------------------
+Employee ID: ID0001
+Name: Jahangir Alam Swapon
+Designation: Owner
+Email: shapon.ent@gmail.com
+Phone: 01712190618
+Residential Address: 90/A East Goran, Khilgaon, Dhaka-1219
+Office Address: 23, B.B National Stadium, Super Market, Dhaka-1000
+Office Phone: 01712190618
+Office Email: shapon.ent@gmail.com
+Blood Group: — B+ve
+Date of Birth: —
+
+
+-------------------------------------------------
+Employee ID: ID0002
+Name: Sadakur Rahman Tusher
+Designation: Manager
+Email: naofeltusher16@gmail.com
+Phone: 01851654690
+Residential Address: 8/C, Insaf Tower, 182/18 Hazi Ansar Ali Road, Demra, Dhaka-1361
+Office Address: 23, B.B National Stadium, Super Market, Dhaka-1000
+Office Phone: 01712190614
+Office Email: shapon.ent@gmail.com
+Blood Group: O+ve
+Date of Birth: 17-05-1993
+Date of Joining: 01-06-2013
+
+-------------------------------------------------
+Employee ID: ID0003
+Name: Ismail Hossain Salman
+Designation: Sales & Distribution
+Email: salmansk4g@gmail.com
+Phone: 01632209008
+Residential Address: 5No Gate, Bangabavan, Dhaka-1000
+Office Address: 23, B.B National Stadium, Super Market, Dhaka-1000
+Office Phone: 01712190615
+Office Email: shapon.ent@gmail.com
+Blood Group: O+ve
+Date of Birth: 01-01-1988
+Date of Joining: 01-02-2015
+
+-------------------------------------------------
+Employee ID: ID0004
+Name: Showkat Mir
+Designation: Accounts Manager
+Email: smabul1975@gmail.com
+Phone: 01985989230
+Residential Address: 225, East Goran, Khilgaon, Dhaka-1219
+Office Address: 23, B.B National Stadium, Super Market, Dhaka-1000
+Office Phone: 01712190616
+Office Email: shapon.ent@gmail.com
+Blood Group: B+ve
+Date of Birth: 01-01-1975
+Date of Joining: 18-09-2019
+
+-------------------------------------------------
+Employee ID: ID0005
+Name: Sabbir Alam Shadhin
+Designation: Support Technician
+Email: sashadin865@gmail.com
+Phone: 01618728678
+Residential Address: Bamoil Ideal High School, Demra, Dhaka-1361
+Office Address: 23, B.B National Stadium, Super Market, Dhaka-1000
+Office Phone: 01712190617
+Office Email: shapon.ent@gmail.com
+Blood Group: A+ve
+Date of Birth: 18-12-2005
+Date of Joining: 01-11-2024

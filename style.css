@@ -1,14 +1,36 @@
+/* ===== Global ===== */
 body {
-    background-color: #f8f9fa;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-.employee-card {
-    max-width: 400px;
+/* ===== Banner ===== */
+.banner {
+    text-align: center;
+}
+
+.banner img {
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+/* ===== Employee Images (Same Size) ===== */
+/* ===== Card ===== */
+.card {
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.employee-img {
-    height: 220px;
-    object-fit: cover;
+.card-title {
+    font-weight: 600;
+}
+
+/* ===== Mobile Tweaks ===== */
+@media (max-width: 576px) {
+    .employee-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
 }
