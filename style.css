@@ -1,36 +1,316 @@
-/* ===== Global ===== */
+:root {
+    --primary: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary: #0ea5e9;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --card-bg: #ffffff;
+    --bg-color: #f1f5f9;
+}
+
 body {
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
 }
 
-/* ===== Banner ===== */
-.banner {
-    text-align: center;
+h1, h2, h3, h4, h5, h6, .company-title {
+    font-family: 'Outfit', sans-serif;
 }
 
-.banner img {
-    max-height: 80px;
+/* ===== Hero Section ===== */
+.hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    padding: 60px 0;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, rgba(0,0,0,0) 70%);
+    transform: rotate(30deg);
+}
+
+.hero-glass {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.logo-wrapper {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.company-logo {
+    height: 90px;
+    object-fit: contain;
+}
+
+.company-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.company-info p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+}
+
+.company-info i {
+    width: 20px;
+    color: var(--primary-light);
+    margin-right: 8px;
+}
+
+/* ===== Section Headers ===== */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
     margin-bottom: 10px;
 }
 
-/* ===== Employee Images (Same Size) ===== */
-/* ===== Card ===== */
-.card {
-    border-radius: 12px;
+.title-underline {
+    height: 4px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin: 0 auto;
+    border-radius: 2px;
 }
 
-.card-title {
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-card {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* ===== Employee Cards ===== */
+.employee-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.employee-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+    padding: 35px 25px 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    position: relative;
+}
+
+.profile-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: white;
+}
+
+.employee-name {
+    font-size: 1.3rem;
     font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
 }
 
-/* ===== Mobile Tweaks ===== */
-@media (max-width: 576px) {
-    .employee-img {
-        width: 100px;
-        height: 100px;
-    }
+.role-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
 
-    h3 {
-        font-size: 1.4rem;
+.owner-badge { background: #fee2e2; color: #dc2626; }
+.manager-badge { background: #dcfce7; color: #16a34a; }
+.sales-badge { background: #e0f2fe; color: #0284c7; }
+.accounts-badge { background: #fef3c7; color: #d97706; }
+.support-badge { background: #f3e8ff; color: #9333ea; }
+
+/* Detail Rows */
+.detail-row {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row i {
+    width: 24px;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-right: 12px;
+}
+
+/* ===== Owner Card Special Styles ===== */
+.owner-card {
+    border: none;
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.15);
+}
+
+.owner-card .card-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    z-index: 1;
+}
+
+.owner-card .card-content {
+    padding-top: 100px;
+}
+
+.owner-img {
+    width: 140px;
+    height: 140px;
+    background: white;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #e0e7ff;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.detail-text {
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin: 0;
+}
+
+.detail-text span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.address-section {
+    width: 100%;
+}
+
+.address-box {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+}
+
+.address-box h6 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.address-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-glass {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+    
+    .company-title {
+        font-size: 2rem;
+    }
+    
+    .company-info p {
+        justify-content: center;
     }
 }
